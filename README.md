@@ -1,30 +1,26 @@
-# use-online-status
+# React Hook: use-online-status
+A React hook to observe online status.
 
-> A React hook to observe online status
+[![CircleCI](https://img.shields.io/circleci/project/github/ayltai/use-online-status-hook/master.svg?style=flat)](https://circleci.com/gh/ayltai/use-online-status-hook) ![Maintenance](https://img.shields.io/maintenance/yes/2020) [![Release](https://img.shields.io/github/release/ayltai/use-online-status-hook.svg?style=flat)](https://github.com/ayltai/use-online-status-hook/releases) [![License](https://img.shields.io/github/license/ayltai/use-online-status-hook.svg?style=flat)](https://github.com/ayltai/use-online-status-hook/blob/master/LICENSE)
 
-[![NPM](https://img.shields.io/npm/v/use-online-status.svg)](https://www.npmjs.com/package/use-online-status) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Buy me a coffee](https://img.shields.io/static/v1?label=Buy%20me%20a&message=coffee&color=important&style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://buymeacoff.ee/ayltai)
 
-## Install
-
-```bash
-npm install --save use-online-status
+## Installation
+```shell script
+npm install @ayltai/use-online-status
 ```
 
 ## Usage
-
 ```jsx
-import React, { Component } from 'react'
+import { useOnlineStatus, } from '@ayltai/use-online-status';
 
-import MyComponent from 'use-online-status'
-import 'use-online-status/dist/index.css'
+const Example = () => {
+    const isOnline = useOnlineStatus();
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+    return (
+        <>
+            {`You are ${isOnline ? 'online' : 'offline'}`}
+        </>
+    );
+};
 ```
-
-## License
-
-MIT © [ayltai](https://github.com/ayltai)
